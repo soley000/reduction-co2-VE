@@ -57,6 +57,6 @@ Nous utiliserons des modèles comme **Prophet** ou des réseaux de neurones **LS
 ---
 
 ## Auteur·e
-Rosette-Michèle, étudiande en M1 IA-datasciences
+Rosette-Michèle, étudiante en M1 IA-datasciences
 **IA-school - Groupe-Gema**
 
