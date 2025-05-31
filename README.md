@@ -1,94 +1,62 @@
-# reduction-co2-VE
-Prédiction de la réduction des émissions de CO₂ grâce à l’adoption des véhicules électriques
+# Réduction de CO₂ par l’adoption des véhicules électriques (VE)
+
+Ce projet vise à prédire la réduction des émissions de CO₂ induite par l'adoption croissante des véhicules électriques (VE) en France.  
+Il s’appuie sur des jeux de données publics et l’utilisation de modèles d’intelligence artificielle pour simuler différents scénarios d’évolution du parc automobile.
 
 ---
 
-## ��� Approche IA
+## Objectifs
 
-Ce projet repose sur une approche progressive, combinant des modèles simples et puissants avec des techniques plus avancées, afin de modéliser et prédire l’impact de l’adoption des véhicules électriques sur la réduction des émissions de CO₂.
-
-### ��� Prophet (Meta/Facebook)  
-> Modèle principal utilisé
-
-- **Pourquoi ce choix ?**  
-  Prophet est un modèle de séries temporelles conçu pour être à la fois puissant et facile à utiliser. Il permet de prédire l’évolution d’indicateurs (comme la part des véhicules électriques ou les tonnes de CO₂ évitées) en tenant compte des tendances et de la saisonnalité.
-- **Avantages :** rapide à mettre en œuvre, interprétable, parfait pour les données chronologiques (année par année).
-
-### ��� Régression linéaire ou arbres de décision (Random Forest)
-> Modèles explicatifs alternatifs
-
-- **Pourquoi ?**  
-  Pour expliquer quelles variables influencent le plus la réduction de CO₂ (part des VE, intensité carbone, subventions...).
-- **Avantages :** faciles à comprendre, utiles pour la communication des résultats.
-
-### ��� LSTM (Long Short-Term Memory)
-> Modèle challenge (bonus avancé)
-
-- **Pourquoi ?**  
-  Pour aller plus loin avec un modèle de deep learning, capable d’apprendre des dynamiques plus complexes dans les données temporelles.
-- **Avantages :** très performant sur des séries longues, bonne introduction au deep learning.
+- Quantifier l’impact environnemental du remplacement progressif des véhicules thermiques par des véhicules électriques.
+- Prédire la réduction potentielle de CO₂ en fonction de la croissance de l’adoption des VE.
+- Utiliser des modèles IA de séries temporelles (LSTM, Prophet) pour simuler des scénarios futurs.
+- Exploiter des données ouvertes (ADEME, Our World in Data, IEA...) pour une approche réaliste.
 
 ---
 
-## ��� Objectif pédagogique
+## Structure du projet
 
-Ce projet a aussi pour ambition de me faire progresser dans l'utilisation de modèles d'intelligence artificielle actuels.  
-Je veux apprendre en appliquant des outils concrets, accessibles à mon niveau, tout en me challengeant avec des approches plus avancées comme LSTM.
+- \`data/\` : Données sources brutes (émissions, immatriculations, mix énergétique, etc.)
+- \`scripts/\` : Scripts Python pour prétraitement, modélisation et visualisation
+- \`notebooks/\` : Jupyter Notebooks pour exploration et modélisation
+- \`results/\` : Graphiques, modèles IA entraînés et exports
+- \`docs/\` : Documentation, sources et annexes
 
-## Approche IA
+---
 
-Ce projet repose sur une approche progressive, combinant des modèles accessibles et performants pour prédire l’impact de l’adoption des véhicules électriques sur la réduction des émissions de CO2.
+## 🔧 Environnement
 
-1. Prophet (développé par Meta/Facebook)
-   - Modèle de séries temporelles principal du projet.
-   - Simple à utiliser, il permet de prédire l’évolution d’indicateurs comme la part des véhicules électriques ou les émissions de CO2 évitées.
-   - Avantages : rapide à mettre en œuvre, interprétable, adapté aux données chronologiques (année par année).
+Installer les dépendances nécessaires via :
 
-2. Régression linéaire et Random Forest
-   - Modèles alternatifs pour expliquer les relations entre variables (part de marché des VE, intensité carbone, subventions, etc.).
-   - Avantages : faciles à comprendre, utiles pour identifier les facteurs influents.
+\`\`\`bash
+pip install -r requirements.txt
+\`\`\`
 
-3. LSTM (Long Short-Term Memory)
-   - Modèle avancé de deep learning pour les séries temporelles.
-   - Il sera utilisé comme un bonus pour aller plus loin et apprendre à construire un modèle p
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-cat >> README.md <<'EOF'
+---
 
 ## Approche IA
 
-Ce projet repose sur une approche progressive, combinant des modèles accessibles et performants pour prédire l’impact de l’adoption des véhicules électriques sur la réduction des émissions de CO2.
+Les modèles ont été choisis pour leur capacité à capturer des tendances temporelles (Prophet), à représenter des dépendances complexes (LSTM), tout en restant accessibles et pédagogiques pour une montée en compétence progressive.
 
-1. Prophet (développé par Meta/Facebook)
-   - Modèle de séries temporelles principal du projet.
-   - Simple à utiliser, il permet de prédire l’évolution d’indicateurs comme la part des véhicules électriques ou les émissions de CO2 évitées.
-   - Avantages : rapide à mettre en œuvre, interprétable, adapté aux données chronologiques (année par année).
+Nous utiliserons des modèles comme **Prophet** ou des réseaux de neurones **LSTM** pour :
 
-2. Régression linéaire et Random Forest
-   - Modèles alternatifs pour expliquer les relations entre variables (part de marché des VE, intensité carbone, subventions, etc.).
-   - Avantages : faciles à comprendre, utiles pour identifier les facteurs influents.
+- Prévoir l’évolution de la part de marché des VE
+- Estimer les tonnes de CO₂ évitées selon différents scénarios d’adoption
+- Simuler l’effet de plusieurs paramètres (intensité carbone, croissance annuelle, réglementation)
 
-3. LSTM (Long Short-Term Memory)
-   - Modèle avancé de deep learning pour les séries temporelles.
-   - Il sera utilisé comme un bonus pour aller plus loin et apprendre à construire un modèle plus complexe.
-   - Avantages : performant sur des données temporelles avec dépendances longues, bonne initiation au deep learning.
+---
 
-Objectif pédagogique : utiliser des modèles d’intelligence artificielle modernes, compréhensibles à mon niveau d’étudiante, tout en me challengeant progressivement avec des outils plus puissants.
+## Sources de données
+
+- ADEME (émissions CO₂ des véhicules)
+- Our World in Data (intensité carbone de l’électricité)
+- IEA (données globales sur les VE)
+- Data.gouv.fr (immatriculations, empreintes carbone comparées)
+- Ministère de la Transition Écologique
+
+---
+
+## Auteur·e
+Rosette-Michèle, étudiande en M1 IA-datasciences
+**IA-school - Groupe-Gema**
+
