@@ -1,0 +1,100 @@
+
+ === EMISSIONS VÉHICULES ===
+→ Dimensions : 55044 lignes, 26 colonnes
+→ Aperçu des colonnes et types :
+lib_mrq               object
+lib_mod_doss          object
+lib_mod               object
+dscom                 object
+cnit                  object
+tvv                   object
+cod_cbr               object
+hybride               object
+puiss_admin_98         int64
+puiss_max             object
+typ_boite_nb_rapp     object
+conso_urb             object
+conso_exurb           object
+conso_mixte           object
+co2                  float64
+co_typ_1              object
+hc                    object
+nox                   object
+hcnox                 object
+ptcl                  object
+masse_ordma_min        int64
+masse_ordma_max        int64
+champ_v9              object
+date_maj              object
+Carrosserie           object
+gamme                 object
+dtype: object
+
+⚠️ Valeurs manquantes détectées :
+conso_urb         43
+conso_exurb       43
+conso_mixte       34
+co2               34
+co_typ_1         158
+hc             45271
+nox              158
+hcnox           9888
+ptcl            2678
+champ_v9          61
+date_maj       51797
+dtype: int64
+⚠️ 7 doublon(s) détecté(s).
+
+================================================================================
+
+ === INTENSITÉ CARBONE ÉLECTRICITÉ ===
+→ Dimensions : 5738 lignes, 4 colonnes
+→ Aperçu des colonnes et types :
+Entity                      object
+Code                        object
+Year                         int64
+co2_intensity__gco2_kwh    float64
+dtype: object
+
+⚠️ Valeurs manquantes détectées :
+Code    564
+dtype: int64
+✅ Aucun doublon détecté.
+
+================================================================================
+
+ === PART DE MARCHÉ VE ===
+→ Dimensions : 879106 lignes, 10 colonnes
+→ Aperçu des colonnes et types :
+date_mesure.year                                                                                            object
+geocode_region                                                                                               int64
+libelle_region                                                                                              object
+geocode_departement                                                                                         object
+libelle_departement                                                                                         object
+geocode_commune                                                                                             object
+libelle_commune                                                                                             object
+categorie_vehicule                                                                                          object
+classe_vehicule                                                                                             object
+part_de_marche_des_vehicules_electriques_dans_les_immatriculations_annuelles_immatriculations_vehicules    float64
+dtype: object
+
+✅ Aucune valeur manquante détectée.
+⚠️ 12505 doublon(s) détecté(s).
+
+================================================================================
+
+ === POINTS DE CHARGE ===
+→ Dimensions : 41 lignes, 6 colonnes
+→ Aperçu des colonnes et types :
+trimestre               object
+accessible_au_public     int64
+particulier              int64
+societe                  int64
+annee                    int32
+total_points             int64
+dtype: object
+
+✅ Aucune valeur manquante détectée.
+✅ Aucun doublon détecté.
+
+================================================================================
